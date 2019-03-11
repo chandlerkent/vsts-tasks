@@ -58,7 +58,7 @@ export default class PackerHost implements definitions.IPackerHost {
 
         this._stagingDirectory = path.join(utils.getTempDirectory(), utils.getCurrentTime().toString());
         if(!tl.exist(this._stagingDirectory)) {
-            tl.mkdirP(this._stagingDirectory);    
+            tl.mkdirP(this._stagingDirectory);
         }
 
         console.log(tl.loc("CreatedStagingDirectory", this._stagingDirectory));

@@ -21,6 +21,7 @@ async function run(): Promise<any> {
 
     // run packer commands
     try {
+        console.log("Current Working Dir: " + process.cwd());
         packerFix.run(host);
         await packerValidate.run(host);
         await packerBuild.run(host);
